@@ -43,6 +43,7 @@ python -m uvicorn main:app --reload
 In a new terminal:
 ```bash
 cd frontend
+npm install
 npm start
 ```
 ---
