@@ -1,0 +1,118 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #222;
+}
+
+.content-container {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-title {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.input-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.App-input {
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.App-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.App-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.App-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0056b3, #00aaff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.App-button:disabled {
+  background: linear-gradient(135deg, #6c757d, #a0a0a0);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.error {
+  color: #ff4d4d;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.audio-player {
+  margin-top: 1.5rem;
+}
+
+.audio-player audio {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .content-container {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  .App-title {
+    font-size: 2rem;
+  }
+
+  .App-input,
+  .App-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
